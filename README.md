@@ -29,7 +29,7 @@
 
 <!-- Substitua pelo link do vídeo no YouTube (não listado) -->
 
-[![Assista à demonstração](./docs/video-thumb.png)](https://youtube.com/seu-video-aqui)
+[![Assista à demonstração](./docs/yt.png)](https://youtu.be/l7IhFpaLox4)
 
 _Clique na imagem para assistir ao fluxo completo: login, agenda, financeiro e geração de mensagens com IA._
 

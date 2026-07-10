@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./docs/logo.png" width="120px" style="border-radius: 50%;" />
+<img src="./docs/logo.svg" width="120px" style="border-radius: 50%;" />
 
 # 🐾 FlowHub
 

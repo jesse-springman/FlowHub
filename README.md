@@ -1,221 +1,316 @@
+
+# 🎯 FlowHub
+
+### Plataforma SaaS Multi-Tenant para Gestão de Negócios
+
+Uma plataforma de gestão empresarial desenvolvida para centralizar clientes, agendamentos, financeiro e indicadores de negócio em um único sistema.
+
+A FlowHub evoluiu de uma aplicação voltada para pet shops para uma solução multi-tenant, preparada para atender diferentes segmentos comerciais, com isolamento de dados, personalização por negócio e recursos de inteligência artificial.
+
 <div align="center">
 
-<img src="./docs/logo.svg" width="120px" style="border-radius: 50%;" />
-
-# 🐾 FlowHub
-
-### SaaS Multi-Tenant de Gestão Inteligente para Negócios Locais
-
-[![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![NestJS](https://img.shields.io/badge/NestJS-10-E0234E?style=for-the-badge&logo=nestjs)](https://nestjs.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-336791?style=for-the-badge&logo=postgresql)](https://neon.tech/)
-[![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
-[![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+[🌐 Acessar demonstração](https://petshopbackendservice-peach.vercel.app/apresentacao) · [💻 GitHub](https://github.com/jesse-springman) · [📫 Contato](https://www.linkedin.com/in/jessé-springman-91180b171/)
 
 </div>
 
 ---
 
-> ⚠️ **Este é um repositório de demonstração.**
-> O FlowHub é um produto comercial em produção, atualmente em uso por negócios reais. Por esse motivo, o código-fonte é mantido em repositório privado. Aqui você encontra capturas de tela, vídeo demonstrativo e documentação técnica do projeto.
-> Acesso ao código-fonte pode ser concedido mediante solicitação em processos seletivos — entre em contato pelos links no final desta página.
+## 📌 Sobre o projeto
+
+A FlowHub é um projeto SaaS desenvolvido com foco em gestão e organização de negócios locais.
+
+O sistema permite que diferentes empresas utilizem a mesma plataforma, mantendo seus dados e operações separados.
+
+A aplicação foi construída com uma arquitetura modular, utilizando NestJS no backend, Next.js no frontend e PostgreSQL como banco de dados.
+
+O projeto também conta com recursos financeiros, indicadores de desempenho e um painel de insights com inteligência artificial, que transforma dados calculados pelo sistema em recomendações práticas para o negócio.
+
+### 🎯 Segmentos atendidos
+
+* Pet shops
+* Estéticas automotivas
+* Estúdios de estética feminina
+
+A estrutura permite adaptar a experiência e as funcionalidades conforme o segmento comercial.
 
 ---
 
-## 🎥 Vídeo Demonstrativo
+## 🌐 Demonstração online
 
-<div align="center">
+Acesse a página de apresentação para conhecer a plataforma e visualizar suas funcionalidades.
 
-<!-- Substitua pelo link do vídeo no YouTube (não listado) -->
+**[Acessar a FlowHub](https://petshopbackendservice-peach.vercel.app/apresentacao)**
 
-[![Assista uma breve explicação](./docs/yt2.png)](https://www.youtube.com/watch?v=zLx_ihivb-0)
+> ⚠️ A demonstração utiliza hospedagem gratuita na Render. Como o serviço pode entrar em inatividade, o primeiro acesso pode levar alguns instantes para responder.
 
-[![Assista à demonstração](./docs/yt.png)](https://youtu.be/l7IhFpaLox4)
-
-_Clique na imagem para assistir ao fluxo completo: login, agenda, financeiro e geração de mensagens com IA._
-
-</div>
+O código-fonte principal é mantido em repositório privado. Este repositório público apresenta o projeto, suas funcionalidades, arquitetura e demonstrações visuais.
 
 ---
 
-## 📸 Preview
+## 📸 Interface da plataforma
+
+As imagens abaixo apresentam algumas das principais funcionalidades da FlowHub.
+
+### Dashboard e indicadores
+
+![Dashboard FlowHub](./docs/dash-car.png)
+
+Visão geral das informações do negócio, com indicadores e acompanhamento das atividades.
+
+### Saúde financeira
+
+![Saúde financeira](./docs/financial.png)
+
+Painel financeiro com indicadores de receita, despesas, lucro e desempenho do negócio.
+
+![Saúde financeira - Estética Feminina](./docs/financial-femine.png)
+
+Interface adaptada ao segmento de estética feminina.
+
+### Gestão de agendamentos
+
+![Agenda - Estética Feminina](./docs/appont-femine.png)
+
+Organização dos agendamentos e visualização da agenda conforme o segmento comercial.
+
+![Detalhes dos agendamentos](./docs/appointDetail.png)
+
+Detalhamento dos atendimentos e informações dos agendamentos.
+
+### Experiência mobile
+
+![FlowHub Mobile](./docs/mobile.png)
+
+Interface responsiva para utilização em dispositivos móveis.
+
+> 🔒 Os dados apresentados nas imagens e demonstrações são fictícios ou anonimizados.
+
+---
+
+## ✨ Principais funcionalidades
+
+### 🏢 Arquitetura Multi-Tenant
+
+A FlowHub utiliza uma arquitetura multi-tenant, permitindo que diferentes negócios compartilhem a mesma aplicação.
+
+* Isolamento de dados por `businessId`.
+* Identificação do negócio a partir do contexto autenticado.
+* Separação dos dados de clientes, serviços, agendamentos e financeiro.
+* Personalização visual conforme o segmento comercial.
+* Controle de acesso por perfil de usuário.
+
+### 👥 Gestão de clientes
+
+* Cadastro, edição e consulta de clientes.
+* Histórico de atendimentos.
+* Informações relacionadas a pets ou veículos, conforme o segmento.
+* Organização dos dados por negócio.
+
+### 📅 Agenda inteligente
+
+* Visualização e gerenciamento de agendamentos.
+* Controle de status dos atendimentos.
+* Bloqueio de horários conflitantes.
+* Organização da agenda por negócio.
+* Detalhamento dos atendimentos do dia.
+
+### 💰 Gestão financeira
+
+* Controle de receitas e despesas.
+* Indicadores de receita, despesas e lucro.
+* Ticket médio e total de transações.
+* Comparação de indicadores com períodos anteriores.
+* Gráficos de evolução financeira.
+* Despesas recorrentes.
+* Registro automático de receita ao concluir um agendamento.
+
+### 🧠 Insights de negócio com Inteligência Artificial
+
+A FlowHub possui um painel de insights que utiliza inteligência artificial para interpretar indicadores do negócio e apresentar recomendações práticas.
+
+O sistema identifica sinais relevantes nos dados operacionais e financeiros, como:
+
+* Variações de receita, despesas e lucro.
+* Clientes que estão há muito tempo sem retornar.
+* Oportunidades de recuperação de clientes.
+* Possíveis oportunidades de melhoria na ocupação da agenda.
+
+A IA utiliza informações previamente processadas pelo backend para gerar insights contextualizados, com descrição, prioridade e sugestões de ação.
+
+**O objetivo é transformar indicadores em informações úteis para a tomada de decisão**, ajudando o responsável pelo negócio a identificar oportunidades sem precisar interpretar manualmente todos os gráficos.
+
+### 💬 Comunicação com clientes
+
+* Utilização de templates de mensagens conforme a finalidade da comunicação.
+* Estrutura preparada para diferentes tipos de negócio.
+* Mensagens relacionadas a agendamentos e relacionamento com clientes.
+
+### 📊 Dashboard operacional
+
+* Resumo dos agendamentos do dia.
+* Acompanhamento de atendimentos concluídos e cancelados.
+* Informações financeiras do período.
+* Agregação de indicadores para apresentação no dashboard.
+
+---
+
+## 🏗️ Arquitetura e tecnologias
+
+A aplicação é dividida entre frontend, backend e serviços externos.
+
+```text
+                 FRONTEND
+       Next.js · React · TypeScript
+                    |
+                 REST API
+                    |
+                 BACKEND
+          NestJS · TypeScript
+                    |
+               Prisma ORM
+                    |
+                PostgreSQL
+                    |
+          SERVIÇOS E AUTOMAÇÕES
+       Groq API · GitHub Actions
+```
+
+### Stack utilizada
+
+| Camada                  | Tecnologias                        |
+| ----------------------- | ---------------------------------- |
+| Frontend                | Next.js, React, TypeScript         |
+| Estilização             | Tailwind CSS                       |
+| Backend                 | NestJS, TypeScript                 |
+| Banco de dados          | PostgreSQL                         |
+| ORM                     | Prisma                             |
+| Autenticação            | JWT                                |
+| Validação               | class-validator, class-transformer |
+| Gráficos                | Recharts                           |
+| Inteligência Artificial | Groq API                           |
+| Testes                  | Jest, Testing Library              |
+| Infraestrutura          | Vercel, Render, Neon               |
+| DevOps                  | Docker, GitHub Actions             |
+
+---
+
+## 🔐 Segurança e boas práticas
+
+O desenvolvimento da FlowHub envolve cuidados com segurança, organização e integridade dos dados.
+
+* Autenticação baseada em JWT.
+* Controle de acesso por perfil de usuário.
+* Isolamento multi-tenant utilizando `businessId`.
+* Validação de dados com DTOs.
+* Separação de responsabilidades entre controllers, casos de uso e serviços.
+* Organização modular do backend.
+* Proteção contra consultas entre negócios diferentes.
+* Transações de banco para operações financeiras que exigem atomicidade.
+* Restrições no banco para evitar lançamentos duplicados.
+
+---
+
+## 🧪 Testes e CI/CD
+
+O projeto possui testes automatizados para validar regras de negócio e comportamentos importantes da aplicação.
+
+### Testes
+
+* Testes unitários no backend com Jest.
+* Testes de interface com Testing Library.
+* Testes End-to-End utilizando PostgreSQL.
+* Validação de regras financeiras.
+* Testes de autenticação e autorização.
+* Verificação do isolamento de dados entre negócios.
+
+### Integração contínua
+
+O projeto utiliza GitHub Actions para automatizar a execução dos testes.
+
+O pipeline valida funcionalidades importantes da aplicação, utilizando um banco PostgreSQL provisionado durante a execução dos testes End-to-End.
+
+Essa abordagem permite verificar o comportamento real da persistência de dados, das transações e das regras de negócio.
+
+---
+
+## ⏱️ Automações e tarefas agendadas
+
+A FlowHub utiliza workflows agendados do GitHub Actions para executar rotinas periódicas relacionadas ao processamento e acompanhamento de insights.
+
+Um dos processos verifica resultados de recomendações de recuperação de clientes, permitindo acompanhar se houve retorno após a ação sugerida.
+
+Esse fluxo utiliza um endpoint protegido por segredo, evitando que a rotina de automação fique disponível para chamadas públicas sem autenticação.
+
+---
+
+## 🧠 Desafios técnicos
+
+### Isolamento de dados em arquitetura multi-tenant
+
+A evolução de uma aplicação inicialmente voltada para um único negócio exigiu uma estrutura capaz de atender múltiplas empresas sem misturar informações.
+
+A solução utiliza `businessId` como parte do contexto de autenticação e das consultas ao banco de dados, reforçando o isolamento entre os negócios.
+
+### Consistência das operações financeiras
+
+Operações financeiras precisam preservar a integridade dos dados.
+
+Foram utilizadas transações de banco e restrições de unicidade para evitar inconsistências e lançamentos duplicados em operações recorrentes.
+
+### Confiabilidade dos insights gerados por IA
+
+A inteligência artificial não é responsável por calcular os indicadores financeiros.
+
+O backend processa os dados e calcula os indicadores antes de enviá-los à IA, que atua na interpretação e redação dos insights.
+
+Essa separação reduz o risco de recomendações baseadas em valores inventados ou cálculos incorretos.
+
+### Testes End-to-End com banco real
+
+Para validar comportamentos importantes da aplicação, os testes End-to-End utilizam PostgreSQL em vez de simular toda a camada de persistência.
+
+Isso permite verificar regras de negócio, consultas, transações e restrições do banco de dados em um ambiente mais próximo do funcionamento real.
+
+---
+
+## 🗺️ Roadmap
+
+A FlowHub continua em evolução, com foco em ampliar sua infraestrutura e automatizar processos.
+
+### Próximas etapas planejadas
+
+* [ ] Migração da infraestrutura para VPS.
+* [ ] Integração com gateway de pagamento para cobrança recorrente dos planos.
+* [ ] Integração com a API oficial do WhatsApp Business Platform, da Meta.
+* [ ] Automação de mensagens por templates aprovados.
+* [ ] Evolução dos recursos de gestão e indicadores financeiros.
+* [ ] Melhorias de monitoramento, disponibilidade e escalabilidade.
+
+> Os itens acima representam objetivos futuros e não funcionalidades disponíveis na demonstração atual.
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+**Jessé Springman**
+
+Desenvolvedor Backend / Full Stack, estudante de Análise e Desenvolvimento de Sistemas e criador da FlowHub.
+
+Tenho foco em desenvolvimento backend com Node.js, NestJS, TypeScript e PostgreSQL, além de experiência com frontend, arquitetura de aplicações e integração de sistemas.
+
+Este projeto representa minha evolução prática no desenvolvimento de software, desde a construção de APIs até a criação e evolução de uma plataforma SaaS.
+
+### 📫 Contato
+
+* [LinkedIn](https://www.linkedin.com/in/jessé-springman-91180b171/)
+* [GitHub](https://github.com/jesse-springman)
+* [Email](mailto:jessebarbosa45@gmail.com)
+
+---
 
 <div align="center">
 
-### Dashboard
-
-![Dashboard](./docs/dash-car.png)
-
-### Saúde Financeira Auto
-
-![Financeira](./docs/financial.png)
-
-### Saúde Financeira Estética Feminina
-
-![Financeira](./docs/financial-femine.png)
-
-### Geração de Mensagens com IA
-
-![IA](./docs/ai-message.png)
-
-### Agenda Inteligente p/ Estética Feminina
-
-![Agenda](./docs/appont-femine.png)
-
-### Detalhes dos Agendamentos do Dia
-
-![Detalhes](./docs/appointDetail.png)
-
-### Mobile
-
-![Mobile](./docs/mobile.png)
+**FlowHub — Transformando dados e processos em decisões melhores.**
 
 </div>
 
-🔒 Todos os dados exibidos nos prints e vídeo são fictícios ou anonimizados. Nenhuma informação real de clientes é exposta neste repositório.
-
-🚀 Sobre o Projeto
-
-O FlowHub nasceu como uma solução real para um petshop (projeto original New-Pettz) e evoluiu para um SaaS multi-tenant completo, capaz de atender diferentes tipos de negócios locais — Petshops, Estéticas Automotivas e Estúdios de Estética Feminina — cada um operando em total isolamento de dados, com tema visual dinâmico e regras de negócio próprias.
-
-Hoje o sistema está em uso ativo por negócios reais, gerenciando clientes, agenda, financeiro e comunicação via IA em uma única plataforma.
-
-🏗️ Arquitetura
-┌─────────────────────────────────────────────────┐
-│                   FRONTEND                       │
-│         Next.js 16 · TypeScript · Tailwind       │
-│         Recharts · React Hot Toast               │
-└──────────────────────┬──────────────────────────┘
-                       │ REST API
-┌──────────────────────▼──────────────────────────┐
-│                   BACKEND                        │
-│         NestJS · JWT Auth · Prisma ORM           │
-│         PostgreSQL · Class Validator             │
-└──────────────────────┬──────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────┐
-│                 INTEGRAÇÕES                      │
-│         Groq API (LLaMA 3.1) · WhatsApp          │
-└─────────────────────────────────────────────────┘
-✨ Funcionalidades
-🏢 Multi-Tenant
-Isolamento completo por businessId extraído do JWT — nunca do frontend
-Três tipos de commerce com tema visual dinâmico: PETSHOP, AUTOMOTIVE, FEMININE_AESTHETIC
-Cada tenant tem seus próprios clientes, agendamentos, serviços e dados financeiros
-💰 Módulo Financeiro Completo
-KPIs em tempo real — receita, despesas, lucro, ticket médio e total de transações
-Comparação com mês anterior — variação percentual em cada card
-Gráfico de evolução de receita vs despesa e lucro líquido
-Ranking de maiores receitas por categoria
-Receita automática — ao concluir um agendamento, uma transação é criada automaticamente
-Despesas fixas recorrentes com lançamento mensal controlado e regra anti-duplicata no banco
-📅 Agenda Inteligente
-Calendário mensal com visualização de ocupação por dia
-Bloqueio de horários conflitantes
-Gestão de status (Agendado → Concluído → Cancelado)
-🧠 Painel de Insights Preditivos com IA
-
-A funcionalidade mais avançada do FlowHub: um motor que cruza os dados operacionais do negócio e devolve recomendações acionáveis, priorizadas por impacto.
-
-Como funciona:
-
-Coleta e cruzamento de dados — o algoritmo varre o financeiro (receita, lucro, despesas), a base de clientes (retorno, inatividade) e a ocupação da agenda do tenant, isolando sempre por businessId.
-Filtro de sinais relevantes — dos dados brutos, são extraídos os pontos com maior variação ou risco: queda de receita/lucro, despesas fora do padrão, clientes que não retornam há X dias, horários ociosos recorrentes.
-Geração de insights via IA — os sinais filtrados alimentam a Groq API (LLaMA 3.1), que gera análises em linguagem natural categorizadas em Financeiro, Recuperação de Cliente e Sugestão de Campanha, cada uma com nível de prioridade (alta/média/baixa) e um plano de ação sugerido.
-Ação direta a partir do insight — cada card já nasce com o próximo passo (ex: reengajar clientes específicos via WhatsApp, ajustar meta de lucro do mês), fechando o ciclo entre "descobrir o problema" e "agir sobre ele".
-Verificação automática de resultado — um cron job diário (GitHub Actions) reprocessa os insights de recuperação de cliente já emitidos e verifica se a ação recomendada gerou o resultado esperado (o cliente voltou a agendar). O sistema não só sugere — ele acompanha se a sugestão funcionou.
-
-💡 Diferente de um dashboard tradicional que só exibe números, o painel interpreta os números e devolve recomendações prontas para execução — o objetivo é que o dono do negócio não precise saber ler um gráfico para tomar a decisão certa.
-
-🤖 IA & Mensagens
-Geração de mensagens personalizadas via Groq API (LLaMA 3.1)
-Prompts específicos por tipo de commerce e tipo de mensagem
-Envio direto para o cliente via integração com WhatsApp
-🛎️ Gestão de Serviços
-CRUD de serviços por negócio, vinculados ao agendamento
-Soft delete preserva histórico
-📊 Dashboard Diário
-Resumo do dia: agendamentos, concluídos, cancelados e receita realizada
-Endpoint dedicado que agrega todos os dados em uma única requisição
-👥 Gestão de Clientes
-CRUD completo com dados do cliente, pet/veículo e histórico de atendimentos
-🔐 Autenticação & Documentação
-Login seguro com JWT (cookie HttpOnly + localStorage)
-API documentada com Swagger
-Responsivo — funciona em desktop, Android e iOS
-🔐 Segurança & Boas Práticas
-businessId sempre extraído do JWT — nunca aceito do body, query param ou header
-Validação com class-validator, DTOs tipados com whitelist: true e forbidNonWhitelisted: true
-Separação de responsabilidades — Controller → Use Case → Prisma Service
-RBAC com roles ADMIN, USER, SUPERADMIN e guards específicos
-🧪 Testes
-
-O projeto conta com testes unitários no backend (Jest) e frontend (Testing Library), além de uma suíte de testes E2E que sobe a aplicação real contra um banco de dados PostgreSQL efêmero provisionado no próprio runner do GitHub Actions — sem mocks de banco, só as chamadas a APIs externas (ex: Groq) são mockadas. Tudo integrado a um pipeline de CI/CD que valida a suíte completa a cada push na branch principal.
-
-Destaques da suíte de testes:
-
-Atomicidade do lançamento financeiro — garante rollback se a transação falhar
-Regra anti-duplicata — impede lançamento duplo no mesmo mês
-Isolamento multi-tenant — businessId sempre presente nas queries
-Variação percentual de KPIs — cenários positivo, negativo e sem histórico
-Fluxo completo de autenticação — login, cookie JWT httpOnly, acesso a rota protegida, cookie inválido, logout
-Rate limiting no login — bloqueio após N tentativas na mesma janela, com header Retry-After
-Ciclo completo do painel de insights — geração, persistência, cooldown de 24h e bypass forçado (force: true)
-🔍 Desafios Técnicos Resolvidos
-
-🍎 Safari iOS + Cross-Origin Cookies O Safari bloqueia cookies de domínios diferentes por política ITP. A solução foi usar localStorage + header Authorization para as requisições de API, e setar um cookie no mesmo domínio do frontend para o middleware conseguir ler.
-
-⚙️ JWT Secret em produção A variável de ambiente do secret era lida antes do carregamento completo das envs no provedor de deploy. Solução: migração para carregamento assíncrono via ConfigService.
-
-🔒 Middleware no Edge Runtime O middleware do Vercel roda no servidor — sem acesso a localStorage nem a cookies de outros domínios. Aprendizado: browser, middleware e API são três contextos completamente diferentes.
-
-🏢 Isolamento Multi-Tenant Ao evoluir de single-tenant para multi-tenant, o maior risco era vazamento de dados entre negócios. Solução: businessId extraído exclusivamente do JWT em toda query, reforçado por testes que validam a presença do filtro em cada consulta.
-
-💸 Consistência no Lançamento Financeiro Lançar uma despesa recorrente e criar a transação correspondente precisa ser atômico. Solução: transação de banco agrupando as duas operações, com constraint única garantindo que não haja lançamento duplicado no mesmo mês, mesmo sob concorrência.
-
-🧠 Alucinação de IA em dados financeiros O maior risco de gerar insights com LLM em cima de dados financeiros é a alucinação — a IA "inventando" um número que não existe. A solução foi uma abordagem inspirada em RAG estruturado: a IA nunca acessa dados brutos nem faz cálculo algum — ela recebe um payload já processado e calculado pelo algoritmo (variação percentual de receita/despesa/lucro, clientes inativos, horários ociosos) e atua exclusivamente como camada de redação e contextualização em cima desses dados. O algoritmo calcula, a IA só redige. Essa separação foi reforçada com uma camada de guardrails no prompt de sistema, incluindo:
-
-proibição explícita de calcular ou inventar qualquer número — usar exatamente os valores fornecidos;
-limite de 1 insight por categoria (Financeiro, Recuperação de Cliente, Campanha), evitando ruído;
-regras de formatação e tamanho (título ≤ 60 caracteres, descrição ≤ 280, sem numeração artificial);
-proibição de sugerir descontos, preços ou canais de contato fora do WhatsApp;
-tratamento de contexto informado pelo dono do negócio como dado de interpretação, nunca como instrução de sistema — mitigando prompt injection via input do usuário.
-
-O resultado é um insight que soa "inteligente", mas onde a IA nunca tem autoridade sobre os números — só sobre o texto.
-
-🧪 Testes E2E confiáveis em CI Testes E2E com banco mockado tendem a mascarar bugs reais de query, transação e constraint. A solução foi rodar a suíte E2E contra um PostgreSQL efêmero provisionado no próprio job do GitHub Actions — o banco sobe, recebe as migrations do Prisma, roda a suíte completa contra a aplicação real e é descartado ao final do job. Apenas integrações externas de terceiros (Groq API) são mockadas; toda a camada de persistência, autenticação e regras de negócio é testada contra um banco de verdade, capturando problemas que testes unitários isolados não pegariam — como falha de transação atômica ou constraint anti-duplicata sob concorrência.
-
-⏱️ Fechando o loop da IA: o insight funcionou? Gerar uma recomendação é fácil; saber se ela funcionou é o que prova valor de verdade. Foi implementado um segundo workflow do GitHub Actions (Insights Recovery Outcomes Cron), agendado via cron para rodar diariamente, que chama um endpoint dedicado do backend e reprocessa os insights de recuperação de cliente emitidos anteriormente, verificando se a ação recomendada resultou em retorno do cliente. O endpoint é protegido por um header secreto (x-cron-secret) para não ficar exposto publicamente. Isso transforma o painel de insights de "gerador de sugestões" em um sistema que mede o próprio impacto.
-
-🗄️ Modelagem de Dados (visão geral)
-Business        → Plan · Commerce · Status
-User            → Role (ADMIN | USER | SUPERADMIN)
-Customer        → pets · vehicles · appointments
-Appointment     → AppointmentStatus · transaction
-Transaction     → TransactionType (INCOME | EXPENSE)
-RecurringExpense → launches[]
-Service         → price · active (soft delete)
-🛠️ Stack Completa
-Camada	Tecnologia
-Frontend	Next.js 16, TypeScript, Tailwind CSS
-Backend	NestJS, TypeScript
-ORM	Prisma
-Banco de dados	PostgreSQL (Neon)
-Autenticação	JWT
-Gráficos	Recharts
-IA	Groq API (LLaMA 3.1-8b)
-Testes	Jest, Testing Library
-Validação	class-validator, class-transformer
-Infra & DevOps	Vercel · Render · GitHub Actions (CI/CD) · Docker
-📬 Contato
-
-Interessado em conhecer o código-fonte, testar a plataforma ou conversar sobre o projeto?
-
-<div align="center">
-
-Jessé Springman
-
-GitHub · LinkedIn · E-mail
-
-</div>

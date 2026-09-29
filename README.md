@@ -69,7 +69,7 @@ Interface adaptada ao segmento de estética feminina.
 
 ### Gestão de agendamentos
 
-![Agenda - Estética Feminina](./docs/appont-femine.png)
+![Agenda - Estética Feminina](./docs/appont.png)
 
 Organização dos agendamentos e visualização da agenda conforme o segmento comercial.
 
@@ -79,7 +79,7 @@ Detalhamento dos atendimentos e informações dos agendamentos.
 
 ### Experiência mobile
 
-![FlowHub Mobile](./docs/mobile.png)
+![FlowHub Mobile](./docs/2.png)
 
 Interface responsiva para utilização em dispositivos móveis.
 

@@ -57,6 +57,35 @@ As imagens abaixo apresentam algumas das principais funcionalidades da FlowHub.
 
 Visão geral das informações do negócio, com indicadores e acompanhamento das atividades.
 
+
+### 🧠 Insights com IA
+
+![Insights com IA](./docs/insights.png)
+
+O painel de Insights com IA da FlowHub transforma dados operacionais e financeiros em recomendações personalizadas para ajudar o gestor a identificar oportunidades e tomar decisões mais informadas.
+
+A funcionalidade combina o processamento de dados do backend com inteligência artificial para analisar indicadores do negócio e gerar insights contextualizados.
+
+**Principais recursos:**
+
+* **Análise financeira:** identificação de variações de receita, despesas e lucro.
+* **Recuperação de clientes:** identificação de clientes inativos e oportunidades de reengajamento.
+* **Oportunidades de negócio:** sugestões relacionadas à ocupação da agenda e ao desempenho do estabelecimento.
+* **Recomendações acionáveis:** insights organizados por categoria e prioridade, com sugestões de ações práticas.
+* **Acompanhamento de resultados:** verificação de resultados de ações de recuperação de clientes por meio de rotinas automatizadas.
+
+#### ⚙️ Como funciona
+
+1. O backend processa os dados financeiros e operacionais do negócio.
+2. Os indicadores e sinais relevantes são identificados por regras de negócio.
+3. A IA recebe os dados previamente calculados e gera recomendações em linguagem natural.
+4. Os insights são apresentados em cards, com informações sobre o problema identificado e possíveis ações.
+
+A inteligência artificial atua na interpretação e contextualização dos dados, enquanto os cálculos financeiros permanecem sob responsabilidade do backend.
+
+**Objetivo:** ajudar o gestor a entender o que está acontecendo no negócio e identificar oportunidades de melhoria sem precisar analisar manualmente todos os indicadores.
+
+
 ### Saúde financeira
 
 ![Saúde financeira](./docs/financial.png)

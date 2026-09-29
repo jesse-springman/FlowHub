@@ -53,7 +53,7 @@ As imagens abaixo apresentam algumas das principais funcionalidades da FlowHub.
 
 ### Dashboard e indicadores
 
-![Dashboard FlowHub](./docs/dash-car.png)
+![Dashboard FlowHub](./docs/home.png)
 
 Visão geral das informações do negócio, com indicadores e acompanhamento das atividades.
 
